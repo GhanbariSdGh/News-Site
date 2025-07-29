@@ -41,6 +41,7 @@ $comments = $stmt->fetchAll();
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مدیریت کامنت‌ها</title>
     <style>
 	table {
@@ -108,6 +109,86 @@ $comments = $stmt->fetchAll();
 	  border-radius: 4px;
 	  text-decoration: none;
 	}
+
+    @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+        flex: 1;
+        max-width: 180px;
+        padding: 6px 8px;
+        font-size: 0.85em;
+    }
+
+    .button {
+        padding: 6px 12px;
+        font-size: 0.85em;
+        white-space: nowrap;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.85em;
+        overflow-x: auto;
+        display: block;
+    }
+
+    table thead,
+    table tbody,
+    table th,
+    table td,
+    table tr {
+        display: block;
+    }
+
+    table tr {
+        margin-bottom: 14px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 10px;
+        background: #fff;
+    }
+
+    table td {
+        text-align: right;
+        padding: 6px 10px;
+        border: none;
+        border-bottom: 1px solid #eee;
+        word-wrap: break-word;
+    }
+
+    table td:last-child {
+        border-bottom: none;
+    }
+
+    table th {
+        display: none;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    a.back {
+        font-size: 0.85em;
+        padding: 6px 10px;
+        display: block;
+        margin: 20px auto 0;
+    }
+    }
     </style>
 </head>
 <body>
