@@ -51,6 +51,7 @@ $categories = $pdo->query("SELECT * FROM categories ORDER BY title")->fetchAll()
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>افزودن خبر جدید</title>
     <style>
     body {
@@ -190,6 +191,57 @@ $categories = $pdo->query("SELECT * FROM categories ORDER BY title")->fetchAll()
 	.button:hover {
 	  background-color: #367fa9;
 	}
+
+    @media (max-width: 768px) {
+    form {
+        padding: 15px;
+        margin: 10px;
+        box-shadow: none;
+        max-width: 100%;
+    }
+
+    input,
+    textarea,
+    select {
+        font-size: 0.9em;
+        padding: 7px;
+        margin: 8px 0;
+    }
+
+    button {
+        width: 100%;
+        font-size: 0.95em;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-size: 0.95em;
+    }
+
+    .back {
+        display: block;
+        width: 100%;
+        font-size: 0.9em;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-top: 15px;
+    }
+
+    .msg {
+        font-size: 0.9em;
+        padding: 5px;
+    }
+
+    .error, .success {
+        font-size: 0.9em;
+        margin-top: 10px;
+    }
+    }
     </style>
 </head>
 <body>
