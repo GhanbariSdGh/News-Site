@@ -74,6 +74,7 @@ if (isset($_POST['action']) && $_POST['action'] === 'register') {
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ورود / ثبت نام</title>
     <style>
     body {
@@ -167,6 +168,51 @@ if (isset($_POST['action']) && $_POST['action'] === 'register') {
 	.btn-back:hover {
 	  background: #0056b3;
 	}
+    @media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 40px auto;
+        padding: 15px;
+    }
+
+    .tabs {
+        flex-direction: row;
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+
+    .tab {
+        font-size: 0.9em;
+        padding: 8px 0;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select {
+        font-size: 0.9em;
+        padding: 7px;
+    }
+
+    button {
+        padding: 9px;
+        font-size: 0.9em;
+    }
+
+    .btn-back {
+        width: auto;
+        padding: 8px 12px;
+        font-size: 0.85em;
+    }
+
+    .message {
+        font-size: 0.85em;
+    }
+
+    label {
+        font-size: 0.85em;
+        margin-top: 8px;
+    }
+    }
     </style>
 </head>
 <body>
