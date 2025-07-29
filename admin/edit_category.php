@@ -32,6 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ویرایش دسته‌بندی‌</title>
     <style>
     body {
@@ -73,6 +74,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	.btn:hover {
 	  background: #0056b3;
 	}
+
+    @media (max-width: 768px) {
+    .container {
+        width: 80%;
+        padding: 15px;
+        min-width: auto;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        font-size: 0.85em;
+        padding: 6px 8px;
+    }
+
+    .btn {
+        width: 20%;
+        font-size: 0.85em;
+        padding: 6px 10px;
+        margin-top: 6px;
+    }
+
+    h2 {
+        font-size: 1.1em;
+        margin-bottom: 12px;
+    }
+    }
     </style>
 </head>
 <body>
