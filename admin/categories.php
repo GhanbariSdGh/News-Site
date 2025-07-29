@@ -136,32 +136,33 @@ $categories = $stmt->fetchAll();
 
     form {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        gap: 6px;
-        flex-wrap: wrap;
-        margin-bottom: 10px;
+        flex-direction: column;
+        gap: 8px;
     }
 
     input[type="text"] {
-        flex: 1;
-        padding: 6px 8px;
+        width: 100%;
+        padding: 6px;
         font-size: 0.85em;
-        max-width: 180px;
+        box-sizing: border-box;
     }
 
-    .button {
-        padding: 6px 12px;
+    button.button {
+        padding: 6px 10px;
         font-size: 0.85em;
-        white-space: nowrap;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 4px;
     }
 
     table {
         width: 100%;
         font-size: 0.85em;
-        overflow-x: auto;
+        overflow-x: hidden;
         display: block;
+        background: white;
+        border-collapse: separate;
+        border-spacing: 0 10px;
     }
 
     table thead,
@@ -173,26 +174,65 @@ $categories = $stmt->fetchAll();
     }
 
     table tr {
-        margin-bottom: 14px;
+        margin-bottom: 12px;
         border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 10px;
+        border-radius: 6px;
+        padding: 8px 12px;
         background: #fff;
     }
 
+    table th {
+        display: none;
+    }
+
     table td {
-        text-align: right;
-        padding: 6px 10px;
+        position: relative;
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 50%;
         border: none;
         border-bottom: 1px solid #eee;
+        white-space: normal;
+        word-break: break-word;
     }
 
     table td:last-child {
         border-bottom: none;
     }
 
-    table th {
-        display: none;
+    table td:before {
+        position: absolute;
+        right: 12px;
+        top: 8px;
+        width: 45%;
+        font-weight: bold;
+        white-space: nowrap;
+        text-align: right;
+        content: attr(data-label);
+    }
+
+    table td:nth-of-type(1):before { content: "ردیف"; }
+    table td:nth-of-type(2):before { content: "عنوان"; }
+    table td:nth-of-type(3):before { content: "تاریخ ایجاد"; }
+    table td:nth-of-type(4):before { content: "عملیات"; }
+
+    a.button {
+        display: inline-block;
+        padding: 6px 10px;
+        font-size: 0.85em;
+        margin: 3px 3px 3px 0;
+        border-radius: 3px;
+    }
+
+    a.back {
+        margin-top: 20px;
+        display: block;
+        background: #007bff;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-decoration: none;
+        text-align: center;
     }
 
     #create-form form {
@@ -204,13 +244,6 @@ $categories = $stmt->fetchAll();
     h2 {
         font-size: 1.3em;
         text-align: center;
-    }
-
-    a.back {
-        font-size: 0.85em;
-        padding: 6px 10px;
-        display: block;
-        margin: 20px auto 0;
     }
     }
     </style>
