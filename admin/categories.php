@@ -243,7 +243,6 @@ $categories = $stmt->fetchAll();
 
     h2 {
         font-size: 1.3em;
-        text-align: center;
     }
     }
     </style>
