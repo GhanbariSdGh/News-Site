@@ -45,6 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ویرایش خبر</title>
     <style>
      body {
@@ -188,6 +189,59 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	.button:hover {
 	  background-color: #367fa9;
 	}
+
+    @media (max-width: 768px) {
+    form {
+        padding: 15px;
+        margin: 10px auto;
+        max-width: 100%;
+        box-shadow: none;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 95%;
+        font-size: 0.95em;
+        padding: 8px;
+        margin: 10px 0;
+    }
+
+    label {
+        font-size: 0.95em;
+        display: block;
+        margin-top: 10px;
+    }
+
+    button,
+    .back {
+        width: 100%;
+        font-size: 0.95em;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    .msg {
+        font-size: 0.9em;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    .error,
+    .success {
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    table {
+        font-size: 0.85em;
+    }
+    }
     </style>
 </head>
 <body>
