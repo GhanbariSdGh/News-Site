@@ -41,6 +41,7 @@ $newsList = $stmt->fetchAll();
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مدیریت اخبار</title>
     <style>
     table {
@@ -108,6 +109,124 @@ $newsList = $stmt->fetchAll();
 	  border-radius: 4px;
 	  text-decoration: none;
 	}
+
+    @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 6px;
+        font-size: 0.85em;
+        box-sizing: border-box;
+    }
+
+    button.button {
+        padding: 6px 10px;
+        font-size: 0.85em;
+        width: 100%;
+        box-sizing: border-box;
+        margin-top: 4px;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.85em;
+        overflow-x: hidden;
+        display: block;
+        background: white;
+        border-collapse: separate;
+        border-spacing: 0 10px;
+    }
+
+    table thead,
+    table tbody,
+    table th,
+    table td,
+    table tr {
+        display: block;
+    }
+
+    table tr {
+        margin-bottom: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 8px 12px;
+        background: #fff;
+    }
+
+    table th {
+        display: none;
+    }
+
+    table td {
+        position: relative;
+        text-align: left;    
+        padding-left: 10px;
+        padding-right: 50%;    
+        border: none;
+        border-bottom: 1px solid #eee;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    table td:last-child {
+        border-bottom: none;
+    }
+
+    table td:before {
+        position: absolute;
+        right: 12px;         
+        top: 8px;
+        width: 45%;
+        font-weight: bold;
+        white-space: nowrap;
+        text-align: right;
+        content: attr(data-label);
+    }
+
+    table td:nth-of-type(1):before { content: "ردیف"; }
+    table td:nth-of-type(2):before { content: "عنوان"; }
+    table td:nth-of-type(3):before { content: "نویسنده"; }
+    table td:nth-of-type(4):before { content: "تاریخ ثبت"; }
+    table td:nth-of-type(5):before { content: "وضعیت"; }
+    table td:nth-of-type(6):before { content: "عملیات"; }
+
+    a.button {
+        display: inline-block;
+        padding: 6px 10px;
+        font-size: 0.85em;
+        margin: 3px 3px 3px 0;
+        border-radius: 3px;
+    }
+
+    a.delete {
+        color: red;
+        text-decoration: none;
+    }
+
+    a.delete:hover {
+        text-decoration: underline;
+    }
+
+    a.back {
+        margin-top: 20px;
+        display: block;
+        background: #007bff;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 4px;
+        text-decoration: none;
+        text-align: center;
+    }
+    }
     </style>
 </head>
 <body>
