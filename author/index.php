@@ -19,6 +19,7 @@ $news_list = $stmt->fetchAll();
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>داشبورد نویسنده</title>
     <style>
 	table {
@@ -114,7 +115,118 @@ $news_list = $stmt->fetchAll();
 	}
 	.button:hover {
 	  background-color: #367fa9;
-	}	
+	}
+
+    @media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    a.button {
+        display: block;
+        width: 100%;
+        font-size: 0.85em;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.85em;
+        overflow-x: hidden;
+        display: block;
+        background: white;
+        border-collapse: separate;
+        border-spacing: 0 10px;
+        margin-top: 10px;
+    }
+
+    table thead,
+    table tbody,
+    table th,
+    table td,
+    table tr {
+        display: block;
+    }
+
+    table tr {
+        margin-bottom: 12px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 8px 12px;
+        background: #fff;
+    }
+
+    table th {
+        display: none;
+    }
+
+    table td {
+        position: relative;
+        text-align: left;
+        padding-left: 10px;
+        padding-right: 50%;
+        border: none;
+        border-bottom: 1px solid #eee;
+        white-space: normal;
+        word-break: break-word;
+    }
+
+    table td:last-child {
+        border-bottom: none;
+    }
+
+    table td:before {
+        position: absolute;
+        right: 12px;
+        top: 8px;
+        width: 45%;
+        font-weight: bold;
+        white-space: nowrap;
+        text-align: right;
+        content: attr(data-label);
+    }
+
+    table td:nth-of-type(1):before { content: "ردیف"; }
+    table td:nth-of-type(2):before { content: "عنوان"; }
+    table td:nth-of-type(3):before { content: "دسته‌بندی"; }
+    table td:nth-of-type(4):before { content: "تاریخ"; }
+    table td:nth-of-type(5):before { content: "وضعیت"; }
+    table td:nth-of-type(6):before { content: "عملیات"; }
+
+    td:last-child {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 6px;
+        padding-top: 12px;
+    }
+
+    td:last-child a.button {
+        font-size: 0.75em;
+        padding: 5px 8px;
+        flex: 1 1 auto;
+        text-align: center;
+        min-width: 70px;
+    }
+
+    .back {
+        display: block;
+        width: 100%;
+        margin-top: 20px;
+        font-size: 0.85em;
+        padding: 10px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    }
     </style>
 </head>
 <body>
