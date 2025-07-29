@@ -26,6 +26,7 @@ $comments = $commentStmt->fetchAll();
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= htmlspecialchars($news['title']) ?></title>
     <style>
     body {
@@ -117,6 +118,89 @@ $comments = $commentStmt->fetchAll();
 	a.back:hover {
 	  background: #0056b3;
 	}
+
+    @media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .news-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .news-content img {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0;
+    }
+
+    .news-text {
+        width: 100%;
+        text-align: justify;
+        margin-top: 15px;
+    }
+
+    .meta {
+        font-size: 0.9em;
+        text-align: center;
+    }
+
+    h2, h3 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    ul li {
+        font-size: 0.9em;
+    }
+
+    input[type="text"],
+    textarea {
+        font-size: 0.8em;
+        padding: 6px;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 14px;
+    }
+
+    a.back {
+        font-size: 0.9em;
+        padding: 6px 12px;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    h2, h3 {
+        font-size: 1.1em;
+    }
+
+    .meta {
+        font-size: 0.85em;
+    }
+
+    ul li {
+        font-size: 0.85em;
+        padding: 8px;
+    }
+
+    input[type="text"],
+    textarea {
+        font-size: 0.75em;
+        padding: 5px;
+    }
+
+    button,
+    a.back {
+        font-size: 0.85em;
+    }
+    }
     </style>
 </head>
 <body>
