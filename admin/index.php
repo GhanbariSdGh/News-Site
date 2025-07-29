@@ -10,6 +10,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>داشبورد ادمین</title>
     <style>
     body {
@@ -70,6 +71,53 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 	  border-radius: 4px;
 	  text-decoration: none;
 	}
+    @media (max-width: 768px) {
+    .card-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 0;
+    }
+
+    .card-list ul {
+        width: 85%;
+        padding: 12px;
+    }
+
+    .card-list a {
+        font-size: 0.9em;
+        padding: 7px;
+    }
+
+    h2 {
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    a.back {
+        font-size: 0.85em;
+        padding: 5px 10px;
+        display: block;
+        width: fit-content;
+        margin: 16px auto 0;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .card-list ul {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .card-list a {
+        font-size: 0.85em;
+        padding: 6px;
+    }
+
+    h2 {
+        font-size: 1.15em;
+    }
+    }
     </style>
 </head>
 <body>
