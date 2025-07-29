@@ -48,6 +48,7 @@ if (!$category) {
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>اخبار دسته <?= htmlspecialchars($category['title']) ?></title>
     <style>
     body {
@@ -164,17 +165,85 @@ if (!$category) {
 	  background: #0056b3;
 	}
 
-	@media (max-width: 768px) {
-	  .news-card {
-		width: 45%;
-	  }
-	}
+    @media (max-width: 768px) {
+    .search-form {
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        gap: 6px;
+    }
 
-	@media (max-width: 480px) {
-	  .news-card {
-		width: 100%;
-	  }
-	}
+    .search-form input[type="text"],
+    .search-form input[type="date"] {
+        width: 30%;
+        font-size: 0.8em;
+        padding: 6px;
+    }
+
+    .search-form button {
+        font-size: 0.8em;
+        padding: 6px 10px;
+    }
+
+    .news-card {
+        width: 47%;
+        padding: 10px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .news-card img {
+        height: 180px;
+    }
+
+    .news-card h4 {
+        font-size: 0.9em;
+        margin-top: 10px;
+    }
+
+    .news-card p {
+        font-size: 0.75em;
+        margin-bottom: 6px;
+    }
+
+    .news-card a {
+        font-size: 0.75em;
+        padding: 5px 10px;
+        align-self: flex-start;
+    }
+
+    .btn-back {
+        width: 60%;
+        font-size: 0.85em;
+        padding: 10px;
+    }
+    }
+
+    @media (max-width: 480px) {
+    .search-form input[type="text"],
+    .search-form input[type="date"] {
+        width: 100%;
+    }
+
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .news-card {
+        width: 100%;
+    }
+
+    .news-card img {
+        height: 160px;
+    }
+
+    .btn-back {
+        width: 80%;
+    }
+    }
     </style>
 </head>
 <body>
