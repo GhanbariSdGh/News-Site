@@ -111,83 +111,133 @@ $comments = $stmt->fetchAll();
 	}
 
     @media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
+        body {
+            padding: 10px;
+        }
 
-    form {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 6px;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 10px;
-    }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
 
-    input[type="text"] {
-        flex: 1;
-        max-width: 180px;
-        padding: 6px 8px;
-        font-size: 0.85em;
-    }
+        input[type="text"] {
+            width: 100%;
+            padding: 6px;
+            font-size: 0.85em;
+            box-sizing: border-box;
+        }
 
-    .button {
-        padding: 6px 12px;
-        font-size: 0.85em;
-        white-space: nowrap;
-    }
+        button.button {
+            padding: 6px 10px;
+            font-size: 0.85em;
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 4px;
+        }
 
-    table {
-        width: 100%;
-        font-size: 0.85em;
-        overflow-x: auto;
-        display: block;
-    }
+        table {
+            width: 100%;
+            font-size: 0.85em;
+            overflow-x: hidden;
+            display: block;
+            background: white;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
 
-    table thead,
-    table tbody,
-    table th,
-    table td,
-    table tr {
-        display: block;
-    }
+        table thead,
+        table tbody,
+        table th,
+        table td,
+        table tr {
+            display: block;
+        }
 
-    table tr {
-        margin-bottom: 14px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        padding: 10px;
-        background: #fff;
-    }
+        table tr {
+            margin-bottom: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 8px 12px;
+            background: #fff;
+        }
 
-    table td {
-        text-align: right;
-        padding: 6px 10px;
-        border: none;
-        border-bottom: 1px solid #eee;
-        word-wrap: break-word;
-    }
+        table th {
+            display: none;
+        }
 
-    table td:last-child {
-        border-bottom: none;
-    }
+        table td {
+            position: relative;
+            text-align: left;
+            padding-left: 10px;
+            padding-right: 50%;
+            border: none;
+            border-bottom: 1px solid #eee;
+            white-space: normal;
+            word-break: break-word;
+        }
 
-    table th {
-        display: none;
-    }
+        table td:last-child {
+            border-bottom: none;
+        }
 
-    h2 {
-        font-size: 1.3em;
-        text-align: center;
-    }
+        table td:before {
+            position: absolute;
+            right: 12px;
+            top: 8px;
+            width: 45%;
+            font-weight: bold;
+            white-space: nowrap;
+            text-align: right;
+        }
 
-    a.back {
-        font-size: 0.85em;
-        padding: 6px 10px;
-        display: block;
-        margin: 20px auto 0;
-    }
+        table td:nth-of-type(1):before { content: "ردیف"; }
+        table td:nth-of-type(2):before { content: "نام کاربری"; }
+        table td:nth-of-type(3):before { content: "متن کامنت"; }
+        table td:nth-of-type(4):before { content: "خبر مرتبط"; }
+        table td:nth-of-type(5):before { content: "وضعیت"; }
+        table td:nth-of-type(6):before { content: "عملیات"; }
+
+        a.button {
+            display: inline-block;
+            padding: 6px 10px;
+            font-size: 0.85em;
+            margin: 3px 3px 3px 0;
+            border-radius: 3px;
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            cursor: pointer;
+        }
+
+        a.button:hover {
+            background-color: #367fa9;
+        }
+
+        a.delete {
+            color: red;
+            text-decoration: none;
+        }
+
+        a.delete:hover {
+            text-decoration: underline;
+        }
+
+        h2 {
+            font-size: 1.3em;
+        }
+
+        a.back {
+            margin-top: 20px;
+            display: block;
+            background: #007bff;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            text-align: center;
+            font-size: 0.85em;
+        }
     }
     </style>
 </head>
