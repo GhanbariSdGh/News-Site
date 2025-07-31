@@ -1,0 +1,1 @@
+[![Watch the video](https://raw.githubusercontent.com/GhanbariSdGh/News-Site/main/thumbnail.jpg)](https://raw.githubusercontent.com/GhanbariSdGh/News-Site/main/demo.mp4)
